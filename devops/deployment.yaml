@@ -10,7 +10,7 @@ spec:
   - protocol: "TCP"
     port: 80
     targetPort: 80
-  type: LoadBalancer
+  type: ClusterIP
 
 ---
 apiVersion: apps/v1
@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: workflow-app
-        image: osdur3mvpcrdevxmngcr.azurecr.io/my-app:v1.0
+        image: osdur3mvpcrdevxmngcr.azurecr.io/app:v1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
