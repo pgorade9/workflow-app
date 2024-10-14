@@ -1,1 +1,31 @@
-<p>triggerer works!</p>
+<p>Trigger Workflows</p>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">evd</th>
+        <th scope="col">evt</th>
+        <th scope="col">canary</th>
+        <th scope="col">aws</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let corrId of correlationIds | keyvalue; " >
+        <td>{{ corrId.value["csv"] }}</td>
+        <td>{{ corrId.value["wellbore"] }}</td>
+        <td>{{ corrId.value["document"] }}</td>
+        <td>{{ corrId.value["shapefile"] }}</td>
+      </tr>
+     
+       
+      
+
+    </tbody>
+  </table>
+  {{ correlationIds.evd.csv }}
+
+  <p *ngFor= "let env of envs" >{{ testMap.get(env) }}<br></p>
+
+
+  {{ corrIds }}
+</div>
