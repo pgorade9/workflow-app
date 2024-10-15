@@ -11,9 +11,9 @@ export class HttpClientService {
   constructor(private httpClient:HttpClient) { }
   getCorrelationIds(): Observable<corrIdResponse>{
     console.log("I reached get corr function")
-            const res:Observable<corrIdResponse>= this.httpClient.get<corrIdResponse>('http://workflow-monitor:80/get-corrIds');
+            const res:Observable<corrIdResponse>= this.httpClient.get<corrIdResponse>('http://workflow-monitor:32000/get-corrIds');
             return res;
         }
 
-        getResponse() {return this.httpClient.request('GET', 'http://workflow-monitor:80');}
+        getResponse() {return this.httpClient.request('GET', 'http://workflow-monitor:32000');}
 }
