@@ -55,5 +55,7 @@ export class TriggererComponent {
         console.log(data['evd-ltops'].csv_parser_wf_status_gsm);
       return this.corrIds = data['evd-ltops'].csv_parser_wf_status_gsm;
     });
-    temp2 = this.httpClientService.getResponse();
+    temp2 = this.httpClientService.getResponse().subscribe(data=>
+      {
+        console.log(data);});
 }

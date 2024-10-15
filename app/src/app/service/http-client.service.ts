@@ -15,5 +15,5 @@ export class HttpClientService {
             return res;
         }
 
-        getResponse() {this.httpClient.request('GET', 'http://workflow-monitor:80').subscribe((data) => console.log(data));}
+        getResponse() {return this.httpClient.request('GET', 'http://workflow-monitor:80');}
 }
